@@ -1,7 +1,7 @@
 defmodule AppWeb.UserRegistrationControllerTest do
   use AppWeb.ConnCase, async: true
 
-  import App.AccountsFixtures
+  import App.AccountFixtures
 
   describe "GET /users/register" do
     test "renders registration page", %{conn: conn} do

@@ -1,12 +1,12 @@
-defmodule App.Accounts do
+defmodule App.Account do
   @moduledoc """
-  The Accounts context.
+  The Account context.
   """
 
   import Ecto.Query, warn: false
   alias App.Repo
 
-  alias App.Accounts.{User, UserToken, UserNotifier}
+  alias App.Account.{User, UserToken, UserNotifier}
 
   ## Database getters
 

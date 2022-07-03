@@ -1,7 +1,7 @@
 defmodule AppWeb.UserSessionController do
   use AppWeb, :controller
 
-  alias App.Accounts
+  alias App.Account
   alias AppWeb.UserAuth
 
   def new(conn, _params) do
@@ -11,7 +11,7 @@ defmodule AppWeb.UserSessionController do
   def create(conn, %{"user" => user_params}) do
     %{"email" => email, "password" => password} = user_params
 
-    if user = Accounts.get_user_by_email_and_password(email, password) do
+    if user = Account.get_user_by_email_and_password(email, password) do
       UserAuth.log_in_user(conn, user, user_params)
     else
       # In order to prevent user enumeration attacks, don't disclose whether the email is registered.

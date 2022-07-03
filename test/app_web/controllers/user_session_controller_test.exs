@@ -1,7 +1,7 @@
 defmodule AppWeb.UserSessionControllerTest do
   use AppWeb.ConnCase, async: true
 
-  import App.AccountsFixtures
+  import App.AccountFixtures
 
   setup do
     %{user: user_fixture()}

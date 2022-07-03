@@ -1,7 +1,7 @@
-defmodule App.AccountsFixtures do
+defmodule App.AccountFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `App.Accounts` context.
+  entities via the `App.Account` context.
   """
 
   def unique_username, do: ("user" <> "#{System.unique_integer()}") |> String.slice(-6, 6)
@@ -23,7 +23,7 @@ defmodule App.AccountsFixtures do
     {:ok, user} =
       attrs
       |> valid_user_attributes()
-      |> App.Accounts.register_user()
+      |> App.Account.register_user()
 
     user
   end
